@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { AddTask } from "./components/AddTask";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Privacy from "./components/Privacy";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
@@ -93,7 +94,7 @@ function App() {
           onAdd={() => setShowAddTask(!showAddTask)}
           showAdd={showAddTask}
         />
-        
+
         <Route
           path="/"
           exact
@@ -113,6 +114,7 @@ function App() {
           )}
         />
         <Route path="/about" component={About} />
+        <Route path="/privacy" component={Privacy} />
         <Footer />
       </div>
     </Router>

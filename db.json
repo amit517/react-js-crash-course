@@ -9,13 +9,13 @@
     {
       "id": 2,
       "text": "Meeting at school",
-      "reminder": false,
+      "reminder": true,
       "day": "Monday 5 PM"
     },
     {
       "id": 4,
       "text": "Doctors Appointment",
-      "reminder": true,
+      "reminder": false,
       "day": "Monday 05 PM"
     },
     {
