@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useHistory, Redirect } from "react-router-dom";
+import { LoginContext } from "../Helper/Context";
 
-const Profile = ({ authorized }) => {
-  if (!authorized) {
+const Profile = () => {
+  //using context..  Global checking
+
+  const { loggedIn, setLoggedIn } = useContext(LoginContext);
+  if (!loggedIn) {
     return <Redirect to="/login" />;
   }
 
