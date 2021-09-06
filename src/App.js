@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import { LoginContext } from "./Helper/Context";
 
 const NewRedirectApp = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   return (
     <LoginContext.Provider value={{ loggedIn, setLoggedIn }}>

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-import { useHistory } from "react-router-dom";
 import { LoginContext } from "../Helper/Context";
-
+import { useHistory, Redirect } from "react-router-dom";
 const Login = () => {
   // use context
   const { loggedIn, setLoggedIn } = useContext(LoginContext);
@@ -19,7 +18,8 @@ const Login = () => {
 
       {loggedIn ? (
         // all ready logged in
-        <h1>You are logged in</h1>
+
+        <Redirect to="/profile" />
       ) : (
         //not logged in
 
